@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/blog/style.css">
+    <style>
+        .col-lg-6 img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        
+        blockquote {
+            border-left: 5px solid #ccc;
+            padding-left: 15px;
+            font-style: italic;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+        .btn-primary {
+            background-color: #e94f37;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #d44133;
+        }
+        .recipe-section {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .recipe-section h2 {
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #e94f37;
+        }
+        .recipe-list li {
+            margin-bottom: 10px;
+        }
+        .step {
+            border-left: 3px solid #e94f37;
+            padding-left: 15px;
+            margin-bottom: 15px;
+        }
+
+        .comment-form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 100%;
+            margin: 30px auto;
+        }
+        
+        .comment-form-container h3 {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .comment-form-container .form-label {
+            font-size: 0.85rem;
+            color: #555;
+        }
+        
+        .comment-form-container .form-control {
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 0.85rem;
+        }
+        
+        .comment-form-container .form-control:focus {
+            border-color: #ff9282;
+            box-shadow: 0 0 5px #e94f37;
+        }
+        
+        .comment-form-container .star-rating {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            font-size: 1.1rem;
+            color: #e94f37;
+            cursor: pointer;
+        }
+        
+        .comment-form-container .star-rating .star:hover ~ .star,
+        .comment-form-container .star-rating .star:hover {
+            color: #ffb8ad;
+        }
+        
+        .comment-form-container .form-check-label {
+            font-size: 0.8rem;
+            color: #666;
+        }
+        
+        .comment-form-container .btn-submit {
+            background-color: #ff8370;
+            color: white;
+            border: none;
+            padding: 12px 15px;
+            font-size: 0.9rem;
+            border-radius: 6px;
+            width: 100%;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        
+        .comment-form-container .btn-submit:hover {
+            background-color: #ff8370;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .comment-form-container .small {
+            font-size: 0.75rem;
+            color: #888;
+            text-align: center;
+            margin-top: 10px;
+        }
+        
+        .comment-form-container .row.gx-4 {
+            margin-bottom: 15px;
+        }
+        
+        .comment-form-container .col-12 {
+            padding: 5px;
+        }
+        
+        .comment-form-container .p-3 {
+            padding: 0 10px;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top modern-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand ms-5 modern-brand" href="/blog/index.html">Food Blog</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 modern-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active modern-link" aria-current="page" href="/blog/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link modern-link" href="/blog/about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link modern-link" href="/blog/recipes.html">Recipe</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link modern-link" href="/blog/contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav> 
+    
+    <br><br><br><br><br>
+
+    <div class="container">
+        <!-- Two Column Layout -->
+        <div class="row">
+            <!-- Main Content -->
+            <div class="col-lg-6">
+                <h1 class="display-5">Chicken Pitas with Tzatziki</h1>
+                <p class="text-muted">4.8 ⭐ | 1200 Reviews</p>
+                <p>Delicious, easy-to-make sheet pan chicken pitas with homemade tzatziki sauce. A great option for a quick and healthy meal!</p>
+                <img src="https://www.rachaelrayshow.com/sites/default/files/styles/1280x720/public/images/2020-03/greek-chicken.jpg?h=d1cb525d&itok=O7OlqhuH" alt="Sheet Pan Chicken Pitas with Tzatziki" class="img-fluid my-4">
+                <blockquote class="blockquote">
+                    <p class="mb-0">"This recipe is fantastic! The chicken is so juicy, and the tzatziki sauce adds the perfect tang!"</p>
+                    <footer class="mt-0 blockquote-footer">Jessica</footer>
+                </blockquote>
+                <blockquote class="blockquote">
+                    <p class="mb-0">"Simple and flavorful! My family loves it." </p>
+                    <footer class="mt-0 blockquote-footer">John</footer>
+                </blockquote>
+            </div>
+            <!-- Recipe Section -->
+            <div class="col-lg-6 recipe-section">
+                <h2>Recipe</h2>
+                <h5>Ingredients:</h5>
+                <ul class="recipe-list">
+                    <li>2 chicken breasts, cut into strips</li>
+                    <li>2 tablespoons olive oil</li>
+                    <li>1 teaspoon ground cumin</li>
+                    <li>1 teaspoon paprika</li>
+                    <li>1 teaspoon garlic powder</li>
+                    <li>Salt and pepper to taste</li>
+                    <li>1 large red onion, sliced</li>
+                    <li>1 red bell pepper, sliced</li>
+                    <li>4 pita bread rounds</li>
+                    <li>For Tzatziki Sauce:</li>
+                    <li>1 cup Greek yogurt</li>
+                    <li>1 cucumber, grated</li>
+                    <li>1 tablespoon lemon juice</li>
+                    <li>2 cloves garlic, minced</li>
+                    <li>1 tablespoon fresh dill, chopped</li>
+                    <li>Salt and pepper to taste</li>
+                </ul>
+                <h5>Instructions:</h5>
+                <div class="step">
+                    <p><strong>Step 1:</strong> Preheat the oven to 400°F (200°C). Line a sheet pan with parchment paper.</p>
+                </div>
+                <div class="step">
+                    <p><strong>Step 2:</strong> In a bowl, toss chicken strips with olive oil, cumin, paprika, garlic powder, salt, and pepper. Spread the chicken on the sheet pan.</p>
+                </div>
+                <div class="step">
+                    <p><strong>Step 3:</strong> Add the sliced onion and bell pepper to the sheet pan and toss with a little more olive oil. Roast for 20-25 minutes, or until the chicken is cooked through.</p>
+                </div>
+                <div class="step">
+                    <p><strong>Step 4:</strong> While the chicken and vegetables are cooking, make the tzatziki sauce by mixing together Greek yogurt, grated cucumber, lemon juice, garlic, dill, salt, and pepper in a bowl.</p>
+                </div>
+                <div class="step">
+                    <p><strong>Step 5:</strong> Warm the pita bread in the oven for a few minutes, then stuff with the roasted chicken and vegetables.</p>
+                </div>
+                <div class="step">
+                    <p><strong>Step 6:</strong> Drizzle the tzatziki sauce over the chicken and enjoy your meal!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="comment-form-container">
+            <h3 class="fw-bold">Leave a Comment</h3>
+            <form id="commentForm">
+                <div class="row gx-4">
+                    <div class="col-12 col-md-6">
+                        <div class="">
+                            <label for="name" class="form-label">Name *</label>
+                            <input type="text" class="form-control" id="name" placeholder="Your name" required>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="">
+                            <label for="email" class="form-label">Email *</label>
+                            <input type="email" class="form-control" id="email" placeholder="Your email" required>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="">
+                    <label for="comment" class="form-label">Comment *</label>
+                    <textarea class="form-control" id="comment" rows="4" placeholder="Write your comment here..." required></textarea>
+                </div>
+    
+                <div class="">
+                    <label class="form-label">Recipe Rating</label>
+                    <div class="star-rating" id="ratingStars">
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                    </div>
+                </div>
+    
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="subscribe">
+                    <label class="form-check-label" for="subscribe">
+                        Yes, sign me up for recipes and a free eCookbook!
+                    </label>
+                </div>
+    
+                <button type="submit" class="btn btn-submit">Post Comment</button>
+            </form>
+    
+            <p class="small text-muted mt-3">* Required fields</p>
+        </div>
+    </div>
+
+
+    <footer class="text-white py-4" style="background: linear-gradient(to right, #ff7e5f, #feb47b);">
+        <div class="container">
+          <div class="row text-center text-md-start">
+            <!-- Logo and About Section -->
+            <div class="col-md-4 mb-3">
+              <h5 class="fw-bold">Food Blog</h5>
+              <p class="small">
+                Your daily dose of delicious recipes, food stories, and kitchen tips to inspire your culinary journey.
+              </p>
+            </div>
+            <!-- Navigation Links -->
+            <div class="col-md-4 mb-3">
+              <h5 class="fw-bold">Quick Links</h5>
+              <ul class="list-unstyled">
+                <li><a href="/blog/index.html" class="text-white text-decoration-none small">Home</a></li>
+                <li><a href="/blog/recipes.html" class="text-white text-decoration-none small">Recipes</a></li>
+                <li><a href="/blog/about.html" class="text-white text-decoration-none small">About</a></li>
+                <li><a href="/blog/contact.html" class="text-white text-decoration-none small">Contact</a></li>
+              </ul>
+            </div>
+            <!-- Contact and Social Media -->
+            <div class="col-md-4 mb-3">
+              <h5 class="fw-bold">Stay Connected</h5>
+              <p class="small mb-1">Email: info@foodblog.com</p>
+              <p class="small">Phone: +123 456 7890</p>
+              <div>
+                <a href="#" class="text-white me-3"><i class="fab fa-facebook-f fa-lg"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-pinterest fa-lg"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // JavaScript to handle star rating functionality
+        const stars = document.querySelectorAll(".star-rating .star");
+        stars.forEach((star, index) => {
+            star.addEventListener("click", () => {
+                stars.forEach((s, i) => {
+                    s.style.color = i <= index ? "#ffb8ad" : "#e94f37";
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

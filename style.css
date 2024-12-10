@@ -1,0 +1,350 @@
+/* Overall Navbar */
+.modern-navbar {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease-in-out;
+}
+
+/* Brand Styling */
+.modern-brand {
+    font-family: 'Poppins', sans-serif; 
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.modern-brand:hover {
+    color: #ffd1a9;
+}
+
+/* Navbar Links */
+.modern-link {
+    font-family: 'Roboto', sans-serif; 
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.modern-link:hover {
+    background-color: rgba(255, 255, 255, 0.2); 
+    color: #ffd1a9;
+    text-decoration: none;
+}
+
+/* Navbar Toggler */
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml,%3csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3e%3cpath stroke="rgba(255, 255, 255, 1)" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/%3e%3c/svg%3e');
+}
+
+
+.modern-nav {
+    gap: 10px; 
+}
+
+
+
+
+
+/* Header Container */
+.header {
+    padding: 30px 20px;
+    border-radius: 8px;
+    margin: 85px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    max-width: 100%; 
+    transition: transform 0.3s ease-in-out;
+}
+
+.header:hover {
+    transform: scale(1.02); 
+}
+
+/* Header Text */
+.header h4 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333; 
+    line-height: 1.5;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); 
+}
+
+
+
+
+
+
+
+/* Container Styling */
+/* Images */
+.four-pic img {
+    border-radius: 8px; 
+    height: 300px; 
+    width: 100%; 
+    object-fit: cover; 
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    background-color: #f0f0f0; 
+}
+
+.four-pic .col {
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.four-pic .col:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Text Below Images */
+.four-pic p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.four-pic .col:hover p {
+    color: #ff7e5f; 
+}
+
+
+
+
+
+/* Container Styling */
+.three-pic {
+    padding: 40px 20px;
+    background: #ffffff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+/* h2 Styling - Merriweather */
+.three-pic .col h2 {
+    font-family: 'Merriweather', serif; 
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* h4 Styling - Lato */
+.three-pic .col h4 {
+    font-family: 'Lato', sans-serif; 
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* p Styling - Open Sans */
+.three-pic .col p {
+    font-family: 'Open Sans', sans-serif; 
+    font-size: 1rem;
+    font-weight: 400;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.three-pic .btn {
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: #dcdcdc;
+    border: none;
+    color: #000000;
+    transition: background-color 0.3s ease;
+}
+
+
+/* Images */
+.three-pic img {
+    width: 100%; 
+    height: 400px;
+    object-fit: cover; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+
+
+
+
+
+/* General Reset for Flex Layout */
+.social-signup, .recipe-book {
+    width: 100%;
+    margin: 20 auto;
+    padding: 10px;
+    background: linear-gradient(to right, #ff7e5f, #feb47b); 
+}
+
+/* Social Signup Styles */
+.social-signup .social-media {
+    display: flex;
+    align-items: center;
+}
+
+.social-signup .follow-us {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.social-signup .social-icon {
+    color: #333;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-signup .social-icon:hover {
+    color: #f7b500;
+}
+
+/* Signup Form */
+.social-signup .signup-form {
+    display: flex;
+    align-items: center;
+}
+
+.social-signup .signup-text {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.social-signup .form-container {
+    display: flex;
+}
+
+.social-signup .form-control {
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+.social-signup .form-control:focus {
+    border-color: #f7b500;
+    box-shadow: 0 0 5px rgba(247, 181, 0, 0.5);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Recipe Book Section */
+.recipe-book {
+    background: #ffffff;
+    border-radius: 20px; 
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1); 
+    overflow: hidden; 
+}
+
+/* Recipe Image Styling */
+.recipe-book .recipe-image {
+    border-radius: 20px; 
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15); 
+    filter: brightness(0.8); 
+    object-fit: cover; 
+    height: 300px; 
+    width: 100%; 
+}
+
+/* Text Shadow Styling */
+.recipe-book .text-shadow {
+    text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.6); 
+}
+
+/* Button Hover Effects */
+.recipe-book .btn-hover-animate {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    border-radius: 50px; 
+}
+
+.recipe-book .btn-hover-animate:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 8px 35px rgba(0, 0, 0, 0.15);
+    background-color: #515151; 
+}
+
+/* Form Styling */
+.recipe-book .form-control {
+    border: 1px solid #ddd;
+    padding: 12px 20px; 
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe-book .form-control:focus {
+    border-color: #575757;
+    box-shadow: 0 0 0 0.25rem rgba(97, 96, 94, 0.5);
+}
+
+/* Button Styling */
+.recipe-book .btn-warning {
+    background-color: #dcdcdc;
+    border-color: #a9a9a9;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+
+/* Typography Enhancements */
+.recipe-book h4 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #555;
+}
+
+.recipe-book h3 {
+    font-size: 2.2rem; 
+    font-weight: 700;
+    color: #1c1c1c;
+    margin-bottom: 10px; 
+}
+
+.recipe-book p.lead {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

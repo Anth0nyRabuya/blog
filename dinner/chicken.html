@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/blog/style.css">
+    <style>
+        blockquote {
+            border-left: 5px solid #ccc;
+            padding-left: 15px;
+            font-style: italic;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+        .btn-primary {
+            background-color: #e94f37;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #d44133;
+        }
+        .recipe-section {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .recipe-section h2 {
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #e94f37;
+        }
+        .recipe-list li {
+            margin-bottom: 10px;
+        }
+        .step {
+            border-left: 3px solid #e94f37;
+            padding-left: 15px;
+            margin-bottom: 15px;
+        }
+
+        .comment-form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 100%;
+            margin: 30px auto;
+        }
+        
+        .comment-form-container h3 {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .comment-form-container .form-label {
+            font-size: 0.85rem;
+            color: #555;
+        }
+        
+        .comment-form-container .form-control {
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 0.85rem;
+        }
+        
+        .comment-form-container .form-control:focus {
+            border-color: #ff9282;
+            box-shadow: 0 0 5px #e94f37;
+        }
+        
+        .comment-form-container .star-rating {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            font-size: 1.1rem;
+            color: #e94f37;
+            cursor: pointer;
+        }
+        
+        .comment-form-container .star-rating .star:hover ~ .star,
+        .comment-form-container .star-rating .star:hover {
+            color: #ffb8ad;
+        }
+        
+        .comment-form-container .form-check-label {
+            font-size: 0.8rem;
+            color: #666;
+        }
+        
+        .comment-form-container .btn-submit {
+            background-color: #ff8370;
+            color: white;
+            border: none;
+            padding: 12px 15px;
+            font-size: 0.9rem;
+            border-radius: 6px;
+            width: 100%;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        
+        .comment-form-container .btn-submit:hover {
+            background-color: #ff8370;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .comment-form-container .small {
+            font-size: 0.75rem;
+            color: #888;
+            text-align: center;
+            margin-top: 10px;
+        }
+        
+        .comment-form-container .row.gx-4 {
+            margin-bottom: 15px;
+        }
+        
+        .comment-form-container .col-12 {
+            padding: 5px;
+        }
+        
+        .comment-form-container .p-3 {
+            padding: 0 10px;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top modern-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand ms-5 modern-brand" href="/blog/index.html">Food Blog</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 modern-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active modern-link" aria-current="page" href="/blog/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link modern-link" href="/blog/about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link modern-link" href="/blog/recipes.html">Recipe</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link modern-link" href="/blog/contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav> 
+    
+    
+    <br><br><br><br><br>
+
+    <div class="container">
+        <!-- Two Column Layout -->
+        <div class="row">
+            <!-- Main Content -->
+            <div class="col-lg-6">
+                <h1 class="display-5">Stuffed Chicken Breast</h1>
+                <p class="text-muted">5.0 ⭐ | 1500 Reviews</p>
+                <p>This delicious stuffed chicken breast is filled with creamy spinach, cheese, and seasoned to perfection!</p>
+                <img src="https://thecozycook.com/wp-content/uploads/2023/08/Stuffed-Chicken-Breast-f.jpg" alt="Stuffed Chicken Breast" class="img-fluid my-4">
+                <blockquote class="blockquote">
+                    <p class="mb-0">"Incredible recipe! The chicken was juicy and flavorful, and the stuffing added the perfect creaminess!"</p>
+                    <footer class="mt-0 blockquote-footer">Jessica</footer>
+                </blockquote>
+                <blockquote class="blockquote">
+                    <p class="mb-0">"I loved this! The stuffing made the chicken so tender, and it was easy to make!"</p>
+                    <footer class="mt-0 blockquote-footer">Mike</footer>
+                </blockquote>
+            </div>
+            <!-- Recipe Section -->
+            <div class="col-lg-6 recipe-section">
+                <h2>Recipe</h2>
+                <h5>Ingredients:</h5>
+                <ul class="recipe-list">
+                    <li>4 boneless, skinless chicken breasts</li>
+                    <li>1 cup spinach, chopped</li>
+                    <li>1/2 cup cream cheese, softened</li>
+                    <li>1/2 cup shredded mozzarella cheese</li>
+                    <li>2 cloves garlic, minced</li>
+                    <li>1 tsp paprika</li>
+                    <li>1 tsp dried oregano</li>
+                    <li>Salt and pepper to taste</li>
+                    <li>Olive oil for searing</li>
+                </ul>
+                <h5>Instructions:</h5>
+                <div class="step">
+                    <p><strong>Step 1:</strong> Preheat your oven to 375°F (190°C). Cut a pocket into the side of each chicken breast.</p>
+                </div>
+                <div class="step">
+                    <p><strong>Step 2:</strong> In a bowl, mix together the spinach, cream cheese, mozzarella, garlic, paprika, oregano, salt, and pepper.</p>
+                </div>
+                <div class="step">
+                    <p><strong>Step 3:</strong> Stuff each chicken breast with the spinach and cheese mixture, securing with toothpicks if necessary.</p>
+                </div>
+                <div class="step">
+                    <p><strong>Step 4:</strong> Heat olive oil in a skillet over medium-high heat. Sear the chicken on both sides until golden brown (about 2-3 minutes per side).</p>
+                </div>
+                <div class="step">
+                    <p><strong>Step 5:</strong> Transfer the chicken breasts to a baking dish and bake for 20-25 minutes, or until fully cooked.</p>
+                </div>
+                <div class="step">
+                    <p><strong>Step 6:</strong> Remove from oven and let rest for 5 minutes before serving.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="comment-form-container">
+            <h3 class="fw-bold">Leave a Comment</h3>
+            <form id="commentForm">
+                <div class="row gx-4">
+                    <div class="col-12 col-md-6">
+                        <div class="">
+                            <label for="name" class="form-label">Name *</label>
+                            <input type="text" class="form-control" id="name" placeholder="Your name" required>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="">
+                            <label for="email" class="form-label">Email *</label>
+                            <input type="email" class="form-control" id="email" placeholder="Your email" required>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="">
+                    <label for="comment" class="form-label">Comment *</label>
+                    <textarea class="form-control" id="comment" rows="4" placeholder="Write your comment here..." required></textarea>
+                </div>
+    
+                <div class="">
+                    <label class="form-label">Recipe Rating</label>
+                    <div class="star-rating" id="ratingStars">
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                    </div>
+                </div>
+    
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="subscribe">
+                    <label class="form-check-label" for="subscribe">
+                        Yes, sign me up for recipes and a free eCookbook!
+                    </label>
+                </div>
+    
+                <button type="submit" class="btn btn-submit">Post Comment</button>
+            </form>
+    
+            <p class="small text-muted mt-3">Your email will not be published. Required fields are marked *</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-white py-4" style="background: linear-gradient(to right, #ff7e5f, #feb47b);">
+        <div class="container">
+          <div class="row text-center text-md-start">
+            <!-- Logo and About Section -->
+            <div class="col-md-4 mb-3">
+              <h5 class="fw-bold">Food Blog</h5>
+              <p class="small">
+                Your daily dose of delicious recipes, food stories, and kitchen tips to inspire your culinary journey.
+              </p>
+            </div>
+            <!-- Navigation Links -->
+            <div class="col-md-4 mb-3">
+              <h5 class="fw-bold">Quick Links</h5>
+              <ul class="list-unstyled">
+                <li><a href="/blog/index.html" class="text-white text-decoration-none small">Home</a></li>
+                <li><a href="/blog/recipes.html" class="text-white text-decoration-none small">Recipes</a></li>
+                <li><a href="/blog/about.html" class="text-white text-decoration-none small">About</a></li>
+                <li><a href="/blog/contact.html" class="text-white text-decoration-none small">Contact</a></li>
+              </ul>
+            </div>
+            <!-- Contact and Social Media -->
+            <div class="col-md-4 mb-3">
+              <h5 class="fw-bold">Stay Connected</h5>
+              <p class="small mb-1">Email: info@foodblog.com</p>
+              <p class="small">Phone: +123 456 7890</p>
+              <div>
+                <a href="#" class="text-white me-3"><i class="fab fa-facebook-f fa-lg"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-pinterest fa-lg"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>

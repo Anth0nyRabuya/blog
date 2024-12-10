@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipes</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    
+  h1, h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #333;
+    letter-spacing: -0.5px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+    margin-top: 2rem;
+    color: #444;
+  }
+  
+  /* Card Styles */
+  .card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-body {
+    padding: 25px;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .card-img-top {
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #333;
+    margin: 15px 0;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    color: #777;
+  }
+  
+  /* Button Styling */
+  button.btn-primary {
+    background-color: #525252;
+    border: none;
+    font-size: 1rem;
+    padding: 12px 30px;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button.btn-primary:hover {
+    background-color: #4c4c4c;
+    transform: translateY(-3px);
+  }
+  
+  button.btn-primary:active {
+    background-color: #000000;
+    transform: translateY(1px);
+  }
+  
+  /* Link Styling */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Spacing & Layout Adjustments */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .col {
+    flex: 1 1 calc(33.333% - 30px);
+    margin-bottom: 30px;
+  }
+  
+  @media (max-width: 767px) {
+    .col {
+      flex: 1 1 100%;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+  
+  .text-primary {
+    color: #007bff !important;
+  }
+  
+  .text-secondary {
+    color: #6c757d !important;
+  }
+  
+  /* Card Layout Improvements */
+  .card-body {
+    padding: 20px 30px;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #777;
+  }
+  
+  
+  </style>
+</head>
+<body>
+
+    
+  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top modern-navbar">
+    <div class="container-fluid">
+        <a class="navbar-brand ms-5 modern-brand" href="index.html">Food Blog</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 modern-nav">
+                <li class="nav-item">
+                    <a class="nav-link active modern-link" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link modern-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link modern-link" href="recipes.html">Recipe</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link modern-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+      <div class="container text-center mt-5">
+<!-- Main Heading -->
+<h1 class="mb-4 text-center font-weight-bold text-dark" style="font-size: 3rem; letter-spacing: 1px; line-height: 1.3;">
+  Recipes
+</h1>
+
+<!-- Subheading with Paragraph -->
+<p class="lead mb-5 text-center text-muted" style="font-size: 1.25rem; max-width: 700px; margin: 0 auto; line-height: 1.6;">
+  We’ve organized these recipes every way we could think of so you don’t have to! Dietary restrictions, weeknight dinners, meal prep recipes, and more!
+</p>
+
+<!-- Top Rated Section -->
+<h2 class="mb-4 text-center" style="font-size: 2.5rem; color: #333; font-weight: 700;">
+  <i class="bi bi-trophy me-3 text-warning" style="font-size: 2rem;"></i>Top Rated Recipes
+</h2>
+
+<!-- Description of Top Rated Recipes -->
+<p class="mb-5 text-center text-muted" style="font-size: 1.125rem; max-width: 800px; margin: 0 auto; line-height: 1.8;">
+  These are our shining stars – the recipes we come back to again and again.
+</p>
+
+        
+    
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <!-- Recipe 1 -->
+            <div class="col">
+                <div class="card shadow-lg border-0 rounded-3">
+                    <a href="/blog/dinner/lasagna.html" class="featured-link">
+                        <img src="https://cdn.loveandlemons.com/wp-content/uploads/2023/12/vegetarian-lasagna-scaled.jpg" class="card-img-top rounded-top" alt="Recipe 1">
+                        <div class="card-body">
+                            <h5 class="card-title font-weight-bold">Vegetarian Lasagna</h5>
+                            <div class="d-flex align-items-center justify-content-center mb-2">
+                                <i class="bi bi-star-fill text-warning me-1"></i>
+                                <i class="bi bi-star-fill text-warning me-1"></i>
+                                <i class="bi bi-star-fill text-warning me-1"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                            </div>
+                            <p class="card-text text-muted">1200 Reviews/ 5.0 average</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+    
+            <!-- Recipe 2 -->
+            <div class="col">
+                <div class="card shadow-lg border-0 rounded-3">
+                  <a href="/blog/dinner/salmon.html" class="featured-link">
+                    <img src="https://www.savorynothings.com/wp-content/uploads/2019/04/lemon-garlic-butter-baked-salmon-image-2-500x375.jpg" class="card-img-top rounded-top" alt="Recipe 2">
+                    <div class="card-body">
+                        <h5 class="card-title font-weight-bold">Baked Salmon with Lemon</h5>
+                        <div class="d-flex align-items-center justify-content-center mb-2">
+                            <i class="bi bi-star-fill text-warning me-1"></i>
+                            <i class="bi bi-star-fill text-warning me-1"></i>
+                            <i class="bi bi-star-fill text-warning me-1"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star text-warning"></i>
+                        </div>
+                        <p class="card-text text-muted">1200 reviews / 4.8 average</p>
+                    </div>
+                  </a>
+                </div>
+            </div>
+    
+            <!-- Recipe 3 -->
+            <div class="col">
+                <div class="card shadow-lg border-0 rounded-3">
+                  <a href="/blog/dinner/chicken.html" class="featured-link">
+                    <img src="https://thecozycook.com/wp-content/uploads/2023/08/Stuffed-Chicken-Breast-f.jpg" class="card-img-top rounded-top" alt="Recipe 3">
+                    <div class="card-body">
+                        <h5 class="card-title font-weight-bold">Stuffed Chicken Breast</h5>
+                        <div class="d-flex align-items-center justify-content-center mb-2">
+                            <i class="bi bi-star-fill text-warning me-1"></i>
+                            <i class="bi bi-star-fill text-warning me-1"></i>
+                            <i class="bi bi-star-fill text-warning me-1"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star text-warning"></i>
+                        </div>
+                        <p class="card-text text-muted">895 reviews / 4.5 average</p>
+                    </div>
+                  </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+
+          <!-- Recipe 4 -->
+          <div class="col">
+            <div class="card shadow-lg border-0 rounded-3">
+              <a href="/blog/winter/brownies.html" class="featured-link">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBqfTPqaJQCILMPWi_fYbR_mb5snZZmKErSg&s" class="card-img-top rounded-top" alt="Recipe 4">
+              <div class="card-body">
+                <h5 class="card-title font-weight-bold">Peppermint Brownies</h5>
+                <div class="d-flex align-items-center justify-content-center mb-2">
+                  <i class="bi bi-star-fill text-warning me-1"></i>
+                  <i class="bi bi-star-fill text-warning me-1"></i>
+                  <i class="bi bi-star-fill text-warning me-1"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star text-warning"></i>
+                </div>
+                <p class="card-text text-muted">1340 reviews / 4.7 average</p>
+              </div>
+            </a>
+            </div>
+          </div>
+      
+          <!-- Recipe 5 -->
+          <div class="col">
+            <div class="card shadow-lg border-0 rounded-3">
+              <a href="/blog/winter/pretzels.html" class="featured-link">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDCCzh7NaSNxMT7uNohCrCDRfb6i-Cze106w&s" class="card-img-top rounded-top" alt="Recipe 5">
+              <div class="card-body">
+                <h5 class="card-title font-weight-bold">Basic Soft Pretzels</h5>
+                <div class="d-flex align-items-center justify-content-center mb-2">
+                  <i class="bi bi-star-fill text-warning me-1"></i>
+                  <i class="bi bi-star-fill text-warning me-1"></i>
+                  <i class="bi bi-star-fill text-warning me-1"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star text-warning"></i>
+                </div>
+                <p class="card-text text-muted">1120 reviews / 4.6 average</p>
+              </div>
+              </a>
+            </div>
+          </div>
+      
+          <!-- Recipe 6 -->
+          <div class="col">
+            <div class="card shadow-lg border-0 rounded-3">
+              <a href="/blog/salad/avocado.html" class="featured-link">
+              <img src="https://www.eatingwell.com/thmb/lu7doBNNT7hFFABn6NP7ghojOQE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/6859253-83bb7ca335f046d694de9aa8042eaf0a.jpg" class="card-img-top rounded-top" alt="Recipe 6">
+              <div class="card-body">
+                <h5 class="card-title font-weight-bold">Quinoa & Avocado Salad</h5>
+                <div class="d-flex align-items-center justify-content-center mb-2">
+                  <i class="bi bi-star-fill text-warning me-1"></i>
+                  <i class="bi bi-star-fill text-warning me-1"></i>
+                  <i class="bi bi-star-fill text-warning me-1"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star text-warning"></i>
+                </div>
+                <p class="card-text text-muted">1680 reviews / 4.9 average</p>
+              </div>
+            </a>
+            </div>
+          </div>
+        </div>
+
+    
+<!-- Hidden Recipes -->
+
+<div id="more-recipes" class="row row-cols-1 row-cols-md-3 g-4 d-none">
+  <!-- Recipe 7 -->
+  <div class="col">
+      <div class="card shadow-lg border-0 rounded-3">
+        <a href="/blog/holiday/cookies.html" class="featured-link">
+          <img src="https://fortheloveofcooking-net.exactdn.com/wp-content/uploads/2021/12/Maple-Glazed-Soft-Gingerbread-Cookies-3482.jpg?strip=all&lossy=1&quality=90&ssl=1" class="card-img-top rounded-top" alt="Gingerbread Cookies">
+          <div class="card-body">
+              <h5 class="card-title font-weight-bold">Gingerbread Cookies</h5>
+              <div class="d-flex align-items-center justify-content-center mb-2">
+                  <i class="bi bi-star-fill text-warning me-1"></i>
+                  <i class="bi bi-star-fill text-warning me-1"></i>
+                  <i class="bi bi-star-fill text-warning me-1"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star text-warning"></i>
+              </div>
+              <p class="card-text text-muted">1340 reviews / 4.7 average</p>
+          </div>
+        </a>
+      </div>
+  </div>
+
+  <!-- Recipe 8 -->
+  <div class="col">
+      <div class="card shadow-lg border-0 rounded-3">
+        <a href="/blog/holiday/meatballs.html" class="featured-link">
+          <img src="https://therecipecritic.com/wp-content/uploads/2024/05/swedish-meatballs--1200x1799.jpg" class="card-img-top rounded-top" alt="The Best Swedish Meatballs">
+          <div class="card-body">
+              <h5 class="card-title font-weight-bold">The Best Swedish Meatballs</h5>
+              <div class="d-flex align-items-center justify-content-center mb-2">
+                  <i class="bi bi-star-fill text-warning me-1"></i>
+                  <i class="bi bi-star-fill text-warning me-1"></i>
+                  <i class="bi bi-star-fill text-warning me-1"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star text-warning"></i>
+              </div>
+              <p class="card-text text-muted">1120 reviews / 4.6 average</p>
+          </div>
+        </a>
+      </div>
+  </div>
+
+  <!-- Recipe 9 -->
+  <div class="col">
+      <div class="card shadow-lg border-0 rounded-3">
+        <a href="/blog/holiday/pancakes.html" class="featured-link">
+          <img src="https://lilluna.com/wp-content/uploads/2022/11/swedish-pancakes3-resize-8.jpg" class="card-img-top rounded-top" alt="The Best Swedish Pancakes">
+          <div class="card-body">
+              <h5 class="card-title font-weight-bold">The Best Swedish Pancakes</h5>
+              <div class="d-flex align-items-center justify-content-center mb-2">
+                  <i class="bi bi-star-fill text-warning me-1"></i>
+                  <i class="bi bi-star-fill text-warning me-1"></i>
+                  <i class="bi bi-star-fill text-warning me-1"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star text-warning"></i>
+              </div>
+              <p class="card-text text-muted">1680 reviews / 4.9 average</p>
+          </div>
+        </a>
+      </div>
+  </div>
+</div>
+
+<button id="view-all-btn" class="btn btn-primary mt-4 px-5 py-3 rounded-pill">View All Recipes</button>
+</div>
+
+
+<script>
+  const viewAllButton = document.getElementById("view-all-btn");
+  const moreRecipes = document.getElementById("more-recipes");
+
+  viewAllButton.addEventListener("click", () => {
+      // Show the additional recipes
+      moreRecipes.classList.remove("d-none");
+
+      // Remove the button
+      viewAllButton.remove();
+  });
+</script>
+
+    
+      
+      
+
+<footer class="text-white py-4" style="background: linear-gradient(to right, #ff7e5f, #feb47b);">
+  <div class="container">
+    <div class="row text-center text-md-start">
+      <!-- Logo and About Section -->
+      <div class="col-md-4 mb-3">
+        <h5 class="fw-bold">Food Blog</h5>
+        <p class="small">
+          Your daily dose of delicious recipes, food stories, and kitchen tips to inspire your culinary journey.
+        </p>
+      </div>
+      <!-- Navigation Links -->
+      <div class="col-md-4 mb-3">
+        <h5 class="fw-bold">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="/blog/index.html" class="text-white text-decoration-none small">Home</a></li>
+          <li><a href="/blog/recipes.html" class="text-white text-decoration-none small">Recipes</a></li>
+          <li><a href="/blog/about.html" class="text-white text-decoration-none small">About</a></li>
+          <li><a href="/blog/contact.html" class="text-white text-decoration-none small">Contact</a></li>
+        </ul>
+      </div>
+      <!-- Contact and Social Media -->
+      <div class="col-md-3 mb-3">
+        <h5 class="fw-bold">Stay Connected</h5>
+        <p class="small mb-1">Email: info@foodblog.com</p>
+        <p class="small">Phone: +123 456 7890</p>
+        <div>
+          <a href="#" class="text-white me-3"><i class="fab fa-facebook-f fa-lg"></i></a>
+          <a href="#" class="text-white me-3"><i class="fab fa-twitter fa-lg"></i></a>
+          <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-lg"></i></a>
+          <a href="#" class="text-white"><i class="fab fa-pinterest fa-lg"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+      
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

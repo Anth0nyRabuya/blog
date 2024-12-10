@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salad Recipes</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/blog/style.css">
+  <style>
+    body {
+      background: linear-gradient(to bottom, #fff6e5, #ffe5e0); /* Warm holiday colors */
+    }
+
+    .breadcrumb {
+      background-color: transparent;
+      padding: 0;
+      margin-bottom: 16px;
+    }
+
+    .breadcrumb-item a {
+      color: #388e3c; /* Green link color for salads */
+      text-decoration: none;
+    }
+
+    .breadcrumb-item.active {
+      color: #6c757d;
+    }
+
+    .featured-recipe {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .featured-image {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #388e3c;
+    }
+
+    .featured-text {
+      max-width: 600px;
+    }
+
+    .featured-title {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #388e3c;
+    }
+
+    .featured-subtitle {
+      font-weight: bold;
+      color: #6c757d;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+
+    .featured-link {
+      color: #388e3c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .featured-link:hover {
+      text-decoration: underline;
+    }
+
+    .recipe-card {
+      border: none;
+      overflow: hidden;
+      transition: transform 0.2s ease;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .recipe-card:hover {
+      transform: scale(1.02);
+    }
+
+    .recipe-image {
+      border-radius: 8px;
+      height: 150px;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .recipe-title {
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .review-stars i {
+      color: #f4b400;
+    }
+
+    .review-text {
+      font-size: 12px;
+      color: #6c757d;
+    }
+
+    /* Navbar Styles */
+    .modern-navbar {
+      background-color: #388e3c;
+    }
+
+    .modern-link {
+      color: white;
+      font-weight: bold;
+    }
+
+    .modern-link:hover {
+      color: #f4f4f4;
+    }
+
+    .modern-brand {
+      font-weight: bold;
+      font-size: 24px;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top modern-navbar">
+    <div class="container-fluid">
+        <a class="navbar-brand ms-5 modern-brand" href="/blog/index.html">Food Blog</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 modern-nav">
+                <li class="nav-item">
+                    <a class="nav-link active modern-link" aria-current="page" href="/blog/index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link modern-link" href="/blog/about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link modern-link" href="/blog/recipes.html">Recipe</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link modern-link" href="/blog/contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>  
+
+  <div class="container py-5">
+
+
+    <!-- Featured Section -->
+    <div class="featured-recipe">
+
+      <div>
+        <img src="https://cakesandcoriander.com/wp-content/uploads/2022/06/Herb-Garden-Vietnameses-Salad-3-800x530.jpg" alt="Fresh Garden Salad" class="featured-image">
+        <p class="text-center featured-subtitle mt-2">Featured Recipe:</p>
+        <a href="vinaigrette.html" class="featured-link">Fresh Garden Salad</a>
+      </div>
+
+      <div class="featured-text">
+        <h1 class="featured-title">Salad Recipes</h1>
+        <p>
+          Discover a variety of healthy and refreshing salads! From light leafy greens to hearty grain bowls, these recipes will help you enjoy delicious meals that are both nutritious and satisfying.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container py-4">
+    <h2 class="text-uppercase fw-bold text-center mb-4">All Salad Recipes</h2>
+    <div class="row g-4">
+      <!-- Recipe Cards -->
+      <div class="col-md-3 col-sm-6">
+        <div class="card recipe-card">
+          <a href="avocado.html" class="featured-link">
+          <img src="https://www.eatingwell.com/thmb/lu7doBNNT7hFFABn6NP7ghojOQE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/6859253-83bb7ca335f046d694de9aa8042eaf0a.jpg" alt="Recipe Image" class="recipe-image">
+          <div class="card-body text-center">
+            <p class="recipe-title">Quinoa & Avocado Salad</p>
+            <div class="review-stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <p class="review-text">78 Reviews | 4.7 Average</p>
+          </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card recipe-card">
+          <a href="vinaigrette.html" class="featured-link">
+          <img src="https://cakesandcoriander.com/wp-content/uploads/2022/06/Herb-Garden-Vietnameses-Salad-3-800x530.jpg" alt="Recipe Image" class="recipe-image">
+          <div class="card-body text-center">
+            <p class="recipe-title">Fresh Garden Salad</p>
+            <div class="review-stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <p class="review-text">56 Reviews | 4.6 Average</p>
+          </a>
+          </div>
+        </div>
+      </div>
+      <!-- Added Recipes -->
+      <div class="col-md-3 col-sm-6">
+        <div class="card recipe-card">
+          <a href="feta.html" class="featured-link">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbRLkuLg6b1BfM4k4ZN_6hDSob3J01QHbgZQ&s" alt="Recipe Image" class="recipe-image">
+          <div class="card-body text-center">
+            <p class="recipe-title">Greek Salad with Feta</p>
+            <div class="review-stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <p class="review-text">92 Reviews | 4.8 Average</p>
+          </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card recipe-card">
+          <a href="balsamic.html" class="featured-link">
+          <img src="https://www.allrecipes.com/thmb/Usj7zOLJSQ5xqw-4dwWarvPNjJg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-228126-caprese-salad-with-balsamic-reduction-ddmfs-2644-4x3-f32ac2b2fb9d4234884a752490fb015b.jpg" alt="Recipe Image" class="recipe-image">
+          <div class="card-body text-center">
+            <p class="recipe-title">Caprese Salad with Balsamic Glaze</p>
+            <div class="review-stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <p class="review-text">120 Reviews | 5.0 Average</p>
+          </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="text-white py-4" style="background: linear-gradient(to right, #ff7e5f, #feb47b);">
+    <div class="container">
+      <div class="row text-center text-md-start">
+        <!-- Logo and About Section -->
+        <div class="col-md-4 mb-3">
+          <h5 class="fw-bold">Food Blog</h5>
+          <p class="small">
+            Your daily dose of delicious recipes, food stories, and kitchen tips to inspire your culinary journey.
+          </p>
+        </div>
+        <!-- Navigation Links -->
+        <div class="col-md-4 mb-3">
+          <h5 class="fw-bold">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="/blog/index.html" class="text-white text-decoration-none small">Home</a></li>
+            <li><a href="/blog/recipes.html" class="text-white text-decoration-none small">Recipes</a></li>
+            <li><a href="/blog/about.html" class="text-white text-decoration-none small">About</a></li>
+            <li><a href="/blog/contact.html" class="text-white text-decoration-none small">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Contact and Social Media -->
+        <div class="col-md-4 mb-3">
+          <h5 class="fw-bold">Stay Connected</h5>
+          <p class="small mb-1">Email: info@foodblog.com</p>
+          <p class="small">Phone: +123 456 7890</p>
+          <div>
+            <a href="#" class="text-white me-3"><i class="fab fa-facebook-f fa-lg"></i></a>
+            <a href="#" class="text-white me-3"><i class="fab fa-twitter fa-lg"></i></a>
+            <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="#" class="text-white"><i class="fab fa-pinterest fa-lg"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

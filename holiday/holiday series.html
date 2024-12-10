@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Holiday Series Recipes</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="/blog/style.css">
+  <style>
+    body {
+      background: linear-gradient(to bottom, #fff6e5, #ffe5e0); /* Warm holiday colors */
+    }
+
+    .breadcrumb {
+      background-color: transparent;
+      padding: 0;
+      margin-bottom: 16px;
+    }
+    .breadcrumb-item a {
+      color: #ff4500; /* Festive breadcrumb link color */
+      text-decoration: none;
+    }
+    .breadcrumb-item.active {
+      color: #6c757d; /* Active breadcrumb text color */
+    }
+
+    .featured-recipe {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .featured-image {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #ff4500;
+      
+    }
+
+    .featured-text {
+      max-width: 600px; 
+    }
+
+    .featured-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #c12727;
+      text-align: center;
+      
+      
+    }
+
+    .featured-subtitle {
+      font-weight: bold;
+      color: #6c757d;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+
+    .featured-link {
+      color: #c12727;
+      text-decoration: none;
+      font-weight: bold;
+      
+    }
+
+    .featured-link:hover {
+      text-decoration: underline;
+    }
+
+    .recipe-card {
+      border: none;
+      overflow: hidden;
+      transition: transform 0.2s ease;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .recipe-card:hover {
+      transform: scale(1.02);
+    }
+
+    .recipe-image {
+      border-radius: 8px;
+      height: 150px;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .recipe-title {
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .review-stars i {
+      color: #ffd700; /* Golden stars */
+    }
+
+    .review-text {
+      font-size: 12px;
+      color: #6c757d;
+    }
+  </style>
+</head>
+<body>
+
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top modern-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand ms-5 modern-brand" href="/blog/index.html">Food Blog</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 modern-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active modern-link" aria-current="page" href="/blog/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link modern-link" href="/blog/about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link modern-link" href="/blog/recipes.html">Recipe</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link modern-link" href="/blog/contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>  <br><br><br><br><br>
+
+
+  <div class="mt-5 container py-5">
+    <!-- Featured Section -->
+    <div class="featured-recipe">
+      <!-- Image -->
+      <div>
+        <img src="https://fortheloveofcooking-net.exactdn.com/wp-content/uploads/2021/12/Maple-Glazed-Soft-Gingerbread-Cookies-3482.jpg?strip=all&lossy=1&quality=90&ssl=1" alt="Soft Gingerbread Cookies" class="featured-image">
+        <p class="text-center featured-subtitle mt-2">Featured Recipe:</p>
+        <a href="gingerbread.html" class="featured-link">Gingerbread Cookies</a>
+      </div>
+
+      <!-- Text -->
+      <div class="featured-text">
+        <h1 class="featured-title">Holiday Series Recipes</h1>
+        <p>
+          Indulge in the joy of the holidays with festive recipes! From cookies to dips, and everything in between, these recipes
+          bring warmth and flavor to your celebrations. Gather your loved ones and make this season truly special.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container py-4">
+    <h2 class="text-uppercase fw-bold text-center mb-4">All Holiday Series Recipes</h2>
+    <div class="row g-4">
+      <!-- Recipe Card -->
+      <div class="col-md-3 col-sm-6">
+        <div class="card recipe-card">
+          <img src="https://fortheloveofcooking-net.exactdn.com/wp-content/uploads/2021/12/Maple-Glazed-Soft-Gingerbread-Cookies-3482.jpg?strip=all&lossy=1&quality=90&ssl=1" alt="Soft Gingerbread Cookies" class="recipe-image">
+          <div class="card-body text-center">
+            <a href="gingerbread.html" class="featured-link">
+            <p class="recipe-title">Gingerbread Cookies</p>
+            <div class="review-stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star"></i>
+              <i class="bi bi-star"></i>
+              <i class="bi bi-star"></i>
+            </div>
+            <p class="review-text">127 Reviews | 4.7 Average</p>
+          </a>
+          </div>
+        </div>
+      </div>
+      <!-- Additional Recipe Cards -->
+      <div class="col-md-3 col-sm-6">
+        <div class="card recipe-card">
+          <img src="https://therecipecritic.com/wp-content/uploads/2024/05/swedish-meatballs--1200x1799.jpg" alt="Swedish Meatballs" class="recipe-image">
+          <div class="card-body text-center">
+            <a href="meatballs.html" class="featured-link">
+            <p class="recipe-title">The Best Meatballs</p>
+            <div class="review-stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star"></i>
+            </div>
+            <p class="review-text">16 Reviews | 4.9 Average</p>
+          </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card recipe-card">
+          <img src="https://lilluna.com/wp-content/uploads/2022/11/swedish-pancakes3-resize-8.jpg" alt="Swedish Pancakes" class="recipe-image">
+          <div class="card-body text-center">
+            <a href="pancakes.html" class="featured-link">
+            <p class="recipe-title">Swedish Pancakes</p>
+            <div class="review-stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star"></i>
+              <i class="bi bi-star"></i>
+            </div>
+            <p class="review-text">16 Reviews | 4.8 Average</p>
+          </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card recipe-card">
+          <img src="https://www.modernhoney.com/wp-content/uploads/2019/01/The-Best-Chocolate-Chip-Cookies-12.jpg" alt="Chocolate Cookies" class="recipe-image">
+          <div class="card-body text-center">
+            <a href="cookies.html" class="featured-link">
+            <p class="recipe-title">Chocolate Cookies</p>
+            <div class="review-stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star"></i>
+            </div>
+            <p class="review-text">16 Reviews | 4.9 Average</p>
+          </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="text-white py-4" style="background: linear-gradient(to right, #ff7e5f, #feb47b);">
+    <div class="container">
+      <div class="row text-center text-md-start">
+        <!-- Logo and About Section -->
+        <div class="col-md-4 mb-3">
+          <h5 class="fw-bold">Food Blog</h5>
+          <p class="small">
+            Your daily dose of delicious recipes, food stories, and kitchen tips to inspire your culinary journey.
+          </p>
+        </div>
+        <!-- Navigation Links -->
+        <div class="col-md-4 mb-3">
+          <h5 class="fw-bold">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="/blog/index.html" class="text-white text-decoration-none small">Home</a></li>
+            <li><a href="/blog/recipes.html" class="text-white text-decoration-none small">Recipes</a></li>
+            <li><a href="/blog/about.html" class="text-white text-decoration-none small">About</a></li>
+            <li><a href="/blog/contact.html" class="text-white text-decoration-none small">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Contact and Social Media -->
+        <div class="col-md-4 mb-3">
+          <h5 class="fw-bold">Stay Connected</h5>
+          <p class="small mb-1">Email: info@foodblog.com</p>
+          <p class="small">Phone: +123 456 7890</p>
+          <div>
+            <a href="#" class="text-white me-3"><i class="fab fa-facebook-f fa-lg"></i></a>
+            <a href="#" class="text-white me-3"><i class="fab fa-twitter fa-lg"></i></a>
+            <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="#" class="text-white"><i class="fab fa-pinterest fa-lg"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
